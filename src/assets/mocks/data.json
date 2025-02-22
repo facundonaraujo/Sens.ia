@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "timestamp": "2025-02-22T00:05:23.890074",
+      "num_people": 1,
+      "analyses": [
+          {
+              "score": 0.875,
+              "details": {
+                  "postura": {
+                      "score": 0.35,
+                      "angulo": 99.47147377136051,
+                      "estado": "Excelente"
+                  },
+                  "hombros": {
+                      "score": 0.2,
+                      "diferencia": 0.041215747594833374,
+                      "estado": "Nivelados"
+                  },
+                  "brazos": {
+                      "score": 0.125,
+                      "tension_izq": 158.70671930011306,
+                      "tension_der": 79.45459123745418,
+                      "estado": "Tensos"
+                  },
+                  "centrado": {
+                      "score": 0.2,
+                      "desviacion": 0.021317049860954285,
+                      "estado": "Centrado"
+                  }
+              },
+              "spine_angle": 99.47147377136051
+          }
+      ]
+    }
+  ]
+}

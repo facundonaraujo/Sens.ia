@@ -1,16 +1,19 @@
 export const getDashboard = async () => {
-  const API_URL = "http://localhost:5000/api";
+  // const API_URL = "http://localhost:5000/api";
   const MOCK_URL = "/mocks/data.json";
 
-  try {
-    const response = await fetch(API_URL);
-    if (!response.ok) throw new Error("Error en la API");
-    return processData(await response.json());
-  } catch (error) {
-    console.error(error);
-    const mockResponse = await fetch(MOCK_URL);
-    return processData(await mockResponse.json());
-  }
+  // try {
+  //   const response = await fetch(API_URL);
+  //   if (!response.ok) throw new Error("Error en la API");
+  //   return processData(await response.json());
+  // } catch (error) {
+  //   console.error(error);
+  // const mockResponse = await fetch(MOCK_URL);
+  // return processData(await mockResponse.json());
+  // }
+
+  const mockResponse = await fetch(MOCK_URL);
+  return processData(await mockResponse.json());
 };
 
 const isHappy = (score) => score >= 0.7;
@@ -21,8 +24,6 @@ const processData = (jsonData) => {
   const scores = jsonData.data
     .map((item) => item.analyses?.[0]?.score)
     .filter((score) => typeof score === "number");
-  
-  console.log(scores);
 
   const emotionalStateChart = [
     { name: "Feliz", value: scores.filter(isHappy).length, color: '#00C951' },

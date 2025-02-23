@@ -1,0 +1,169 @@
+{
+  "data": [
+    {
+        "timestamp": "2025-02-22T00:05:54.995196",
+        "num_people": 1,
+        "analyses": [
+            {
+                "score": 0.4, 
+                "details": {
+                    "postura": {
+                        "score": 0,
+                        "angulo": 28.335332897792497,
+                        "estado": "Mala"
+                    },
+                    "hombros": {
+                        "score": 0.2,
+                        "diferencia": 0.01096220314502716,
+                        "estado": "Nivelados"
+                    },
+                    "brazos": {
+                        "score": 0,
+                        "tension_izq": 98.17716540166066,
+                        "tension_der": 49.70862889262844,
+                        "estado": "Tensos"
+                    },
+                    "centrado": {
+                        "score": 0.2,
+                        "desviacion": 0.006359919905662537,
+                        "estado": "Centrado"
+                    }
+                },
+                "spine_angle": 28.335332897792497
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-02-22T00:05:55.274756",
+        "num_people": 1,
+        "analyses": [
+            {
+                "score": 0.525,
+                "details": {
+                    "postura": {
+                        "score": 0,
+                        "angulo": 18.402958152442114,
+                        "estado": "Mala"
+                    },
+                    "hombros": {
+                        "score": 0.2,
+                        "diferencia": 0.014560431241989136,
+                        "estado": "Nivelados"
+                    },
+                    "brazos": {
+                        "score": 0.125,
+                        "tension_izq": 104.51598059592885,
+                        "tension_der": 47.09859728308554,
+                        "estado": "Tensos"
+                    },
+                    "centrado": {
+                        "score": 0.2,
+                        "desviacion": 0.01758122444152832,
+                        "estado": "Centrado"
+                    }
+                },
+                "spine_angle": 18.402958152442114
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-02-22T00:05:55.564741",
+        "num_people": 1,
+        "analyses": [
+            {
+                "score": 0.4,
+                "details": {
+                    "postura": {
+                        "score": 0,
+                        "angulo": 36.32799945247824,
+                        "estado": "Mala"
+                    },
+                    "hombros": {
+                        "score": 0.2,
+                        "diferencia": 0.021022289991378784,
+                        "estado": "Nivelados"
+                    },
+                    "brazos": {
+                        "score": 0,
+                        "tension_izq": 97.5485536605816,
+                        "tension_der": 41.73623164541503,
+                        "estado": "Tensos"
+                    },
+                    "centrado": {
+                        "score": 0.2,
+                        "desviacion": 0.03165343403816223,
+                        "estado": "Centrado"
+                    }
+                },
+                "spine_angle": 36.32799945247824
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-02-22T00:05:55.839016",
+        "num_people": 1,
+        "analyses": [
+            {
+                "score": 0.4,
+                "details": {
+                    "postura": {
+                        "score": 0,
+                        "angulo": 42.67367583362276,
+                        "estado": "Mala"
+                    },
+                    "hombros": {
+                        "score": 0.2,
+                        "diferencia": 0.024046286940574646,
+                        "estado": "Nivelados"
+                    },
+                    "brazos": {
+                        "score": 0,
+                        "tension_izq": 94.12180080733732,
+                        "tension_der": 38.32897632572477,
+                        "estado": "Tensos"
+                    },
+                    "centrado": {
+                        "score": 0.2,
+                        "desviacion": 0.02838262915611267,
+                        "estado": "Centrado"
+                    }
+                },
+                "spine_angle": 42.67367583362276
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-02-22T00:05:56.112821",
+        "num_people": 1,
+        "analyses": [
+            {
+                "score": 0.4,
+                "details": {
+                    "postura": {
+                        "score": 0,
+                        "angulo": 40.66813961048695,
+                        "estado": "Mala"
+                    },
+                    "hombros": {
+                        "score": 0.2,
+                        "diferencia": 0.02928762137889862,
+                        "estado": "Nivelados"
+                    },
+                    "brazos": {
+                        "score": 0,
+                        "tension_izq": 92.89858573836683,
+                        "tension_der": 41.725625388121806,
+                        "estado": "Tensos"
+                    },
+                    "centrado": {
+                        "score": 0.2,
+                        "desviacion": 0.023270055651664734,
+                        "estado": "Centrado"
+                    }
+                },
+                "spine_angle": 40.66813961048695
+            }
+        ]
+    }
+  ]
+}

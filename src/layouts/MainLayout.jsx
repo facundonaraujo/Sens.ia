@@ -12,7 +12,7 @@ const MainLayout = ({ children, header }) => {
             {header}
           </div>
         )}
-        <main className="p-4 min-h-screen" style={{ backgroundColor: "#eeeeee" }}>
+        <main className="p-4 h-full" style={{ backgroundColor: "#eeeeee" }}>
           {children}
         </main>
       </div>

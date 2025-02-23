@@ -94,7 +94,7 @@ const Dashboard = () => {
               </Card>
             </div>
 
-            <div className="bg-white p-4 rounded-md shadow-md h-full self-stretch flex items-center">
+            <div className="bg-white p-4 rounded-md h-full self-stretch flex items-center">
               <HiLightBulb className="w-11 h-11 mr-3" />
               <div>
                 <h4 className="font-semibold mb-2">Insights:</h4>

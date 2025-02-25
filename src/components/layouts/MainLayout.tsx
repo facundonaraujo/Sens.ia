@@ -1,7 +1,14 @@
-import Header from "../components/common/Header";
-import Sidebar from "../components/common/Sidebar";
+import Header from "@components/common/Header";
+import Sidebar from "@components/common/Sidebar";
 
-const MainLayout = ({ children, header }) => {
+import { ReactNode } from "react";
+
+interface MainLayoutProps {
+  children: ReactNode;
+  header?: ReactNode;
+}
+
+const MainLayout = ({ children, header }: MainLayoutProps) => {
   return (
     <div className="flex">
       <Sidebar />

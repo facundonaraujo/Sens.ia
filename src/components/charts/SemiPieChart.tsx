@@ -1,6 +1,10 @@
 import { PieChart, Pie } from "recharts";
 
-const SemiPieChart = ({ percentage }) => {
+interface SemiPieChartProps {
+  percentage: number;
+}
+
+const SemiPieChart = ({ percentage }: SemiPieChartProps) => {
   const data = [
     { name: "Filled", value: percentage, fill: "#00C49F" },
     { name: "Remaining", value: 100 - percentage, fill: "#e5e7eb" },

@@ -1,6 +1,11 @@
+import { ChartData } from "@/types/chart";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
-const PieChartComponent = ({ data }) => {
+interface PieChartComponentProps {
+  data: ChartData[];
+}
+
+const PieChartComponent = ({ data }: PieChartComponentProps) => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>

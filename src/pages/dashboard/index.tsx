@@ -1,48 +1,28 @@
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 
-import MainLayout from "../layouts/MainLayout";
-import SemiPieChart from "../components/charts/SemiPieChart";
-import PieChartComponent from "../components/charts/PieChart";
-import LineChartComponent from "../components/charts/LineChart";
-import InsightCard from "../components/dashboard/InsightCard";
-import Card from "../components/common/Card";
-import DashboardHeader from "../components/dashboard/DashboardHeader";
-import Loader from "../components/common/Loader";
+import MainLayout from "@components/layouts/MainLayout";
+import SemiPieChart from "@components/charts/SemiPieChart";
+import PieChartComponent from "@components/charts/PieChart";
+import LineChartComponent from "@components/charts/LineChart";
+import Card from "@components/common/Card";
+import Loader from "@components/common/Loader";
 
-import { getDashboard } from "../services/dashboard.service";
+import InsightCard from "./components/InsightCard";
+import DashboardHeader from "./components/DashboardHeader";
 
 import { HiLightBulb } from "react-icons/hi";
 import { HiOutlineCash } from "react-icons/hi";
 import { HiOutlineClock } from "react-icons/hi";
 
-const Dashboard = () => {
-  const [data, setData] = useState({ 
-    percentageSatisfaction: 0,
-    percentageSatisfactionPastMonth: 0,
-    averageTicket: 0,
-    percentageTicketPastMonth: 0,
-    averageTime: 0,
-    percentageTimePastMonth: 0,
-    emotionalStateChart: [],
-    monthSatisfactionChart: [],
-    daySatisfactionChart: [],
-    insightsTimeStart: 0,
-    insightsTimeEnd: 0
-  });
-  const [loading, setLoading] = useState(true);
-  const dashboardRef = useRef(null);
+import { useDashboard } from "./hooks/useDashboard";
 
-  useEffect(() => {
-    setLoading(true);
-    getDashboard().then((res) => {
-      setData(res);
-      setLoading(false);
-    });
-  }, []);
+const Dashboard = () => {
+  const dashboardRef = useRef(null);
+  const { data, loading } = useDashboard();
 
   if (loading) {
     return (
-      <MainLayout header={<DashboardHeader />}>
+      <MainLayout header={<DashboardHeader dashboardRef={dashboardRef}/>}>
         <div className="flex justify-center items-center h-full w-full" >
           <Loader text="Cargando datos..." />
         </div>

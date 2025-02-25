@@ -1,10 +1,18 @@
-import Card from "../common/Card";
+import Card from "../../../components/common/Card";
 
-const InsightCard = ({ title, value, percentage, icon }) => {
+interface InsightCardProps {
+  title: string;
+  value: number | string;
+  percentage: number;
+  icon: React.ReactNode;
+  className?: string;
+}
+
+const InsightCard = ({ title, value, percentage, icon, className }: InsightCardProps) => {
   const isPositive = Number(percentage) >= 0;
 
   return (
-    <Card title={title} icon={icon}>
+    <Card title={title} icon={icon} className={className}>
       <div className="flex items-end justify-between">
         <p className="text-3xl font-semibold mr-2">{value}</p>
         <span

@@ -1,4 +1,12 @@
-const Button = ({ onClick, children, className = "" }) => {
+import { ReactNode } from 'react';
+
+interface ButtonProps {
+  onClick: () => void;
+  children: ReactNode;
+  className?: string;
+}
+
+const Button = ({ onClick, children, className = "" }: ButtonProps) => {
   return (
     <button
       onClick={onClick}

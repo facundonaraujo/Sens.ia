@@ -1,27 +1,11 @@
-export const getDashboard = async () => {
-  // const API_URL = "http://localhost:5000/api";
-  const MOCK_URL = "/mocks/data.json";
+import { PostureAnalysisResponse, PostureAnalysisDashboard } from "@/types/postureAnalysis";
 
-  // try {
-  //   const response = await fetch(API_URL);
-  //   if (!response.ok) throw new Error("Error en la API");
-  //   return processData(await response.json());
-  // } catch (error) {
-  //   console.error(error);
-  // const mockResponse = await fetch(MOCK_URL);
-  // return processData(await mockResponse.json());
-  // }
+const isHappy = (score: number) => score >= 0.7;
+const isNeutral = (score: number) => score >= 0.4 && score < 0.7;
+const isAngry = (score: number) => score < 0.4;
 
-  const mockResponse = await fetch(MOCK_URL);
-  return processData(await mockResponse.json());
-};
-
-const isHappy = (score) => score >= 0.7;
-const isNeutral = (score) => score >= 0.4 && score < 0.7;
-const isAngry = (score) => score < 0.4;
-
-const processData = (jsonData) => {
-  const scores = jsonData.data
+export const dashboardAdapter = (data: PostureAnalysisResponse[]): PostureAnalysisDashboard => {
+  const scores = data
     .map((item) => item.analyses?.[0]?.score)
     .filter((score) => typeof score === "number");
 
@@ -43,58 +27,58 @@ const processData = (jsonData) => {
 
   const monthSatisfactionChart = [
     {
-      date: 'Enero',
+      name: 'Enero',
       value: 0,
     },
     {
-      date: 'Febrero',
+      name: 'Febrero',
       value: percentageSatisfaction,
     },
     {
-      date: 'Marzo',
+      name: 'Marzo',
       value: 0,
     },
     {
-      date: 'Abril',
+      name: 'Abril',
       value: 0,
     },
     {
-      date: 'Mayo',
+      name: 'Mayo',
       value: 0,
     },
     {
-      date: 'Junio',
+      name: 'Junio',
       value: 0,
     }
   ]
 
   const daySatisfactionChart = [
     {
-      date: '09:00',
+      name: '09:00',
       value: percentageSatisfaction - 20,
     },
     {
-      date: '10:00',
+      name: '10:00',
       value: percentageSatisfaction + 10,
     },
     {
-      date: '11:00',
+      name: '11:00',
       value: percentageSatisfaction + 12,
     },
     {
-      date: '12:00',
+      name: '12:00',
       value: percentageSatisfaction - 10,
     },
     {
-      date: '13:00',
+      name: '13:00',
       value: percentageSatisfaction + 9,
     },
     {
-      date: '14:00',
+      name: '14:00',
       value: percentageSatisfaction - 1,
     },
     {
-      date: '1:00',
+      name: '1:00',
       value: percentageSatisfaction - 3,
     },
   ]

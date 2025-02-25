@@ -1,9 +1,15 @@
-import Button from "../common/Button";
+import Button from "../../../components/common/Button";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const DashboardHeader = ({ dashboardRef }) => {
+import { RefObject } from "react";
+
+interface DashboardHeaderProps {
+  dashboardRef: RefObject<HTMLDivElement | null>;
+}
+
+const DashboardHeader = ({ dashboardRef }: DashboardHeaderProps) => {
   const handleDownload = async () => {
     if (!dashboardRef?.current) return;
 

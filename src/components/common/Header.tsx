@@ -4,7 +4,7 @@ import { HiUserCircle  } from "react-icons/hi";
 const Header = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-white border-b border-gray-300">
-      <img src="/logo.png" alt="Logo" className="h-10" />
+      <img src="/logo-2.png" alt="Logo" className="h-9" />
       <div className="flex items-center space-x-4">
         <span className="font-medium hidden sm:block">Bienvenida, Olivia</span>
         <HiUserCircle  className="text-gray-500 h-6 w-6" />
